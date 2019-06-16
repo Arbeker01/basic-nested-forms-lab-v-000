@@ -9,12 +9,11 @@ class IngredientsController < ApplicationController
 
   def new
     @ingredient = Ingredient.new
-    @ingredient.ingredients.build
   end
 
   def create
     ingredient = Ingredient.create(ingredient_params)
-     redirect_to ingredient_path
+    redirect_to ingredient_path
   end
 
   def update
